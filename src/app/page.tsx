@@ -1,5 +1,6 @@
 import { About } from '@/components/sections/about';
 import { Hero } from '@/components/sections/hero';
+import { Portfolio } from '@/components/sections/portfolio';
 import { Services } from '@/components/sections/services';
 
 const sectionStub = (id: string, label: string) => (
@@ -25,6 +26,7 @@ export default function HomePage() {
       <Hero imageSrc="/images/hero.jpg" />
       <About />
       <Services />
+      <Portfolio />
       {sectionStub('oeffnungszeiten', 'Öffnungszeiten')}
       {sectionStub('bewertungen', 'Bewertungen')}
       {sectionStub('kontakt', 'Kontakt')}
