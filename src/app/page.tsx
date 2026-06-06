@@ -1,5 +1,6 @@
 import { About } from '@/components/sections/about';
 import { Hero } from '@/components/sections/hero';
+import { OpeningHours } from '@/components/sections/opening-hours';
 import { Portfolio } from '@/components/sections/portfolio';
 import { Services } from '@/components/sections/services';
 
@@ -27,7 +28,7 @@ export default function HomePage() {
       <About />
       <Services />
       <Portfolio />
-      {sectionStub('oeffnungszeiten', 'Öffnungszeiten')}
+      <OpeningHours />
       {sectionStub('bewertungen', 'Bewertungen')}
       {sectionStub('kontakt', 'Kontakt')}
     </>
