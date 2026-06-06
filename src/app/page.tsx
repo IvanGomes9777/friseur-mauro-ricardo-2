@@ -2,6 +2,7 @@ import { About } from '@/components/sections/about';
 import { Hero } from '@/components/sections/hero';
 import { OpeningHours } from '@/components/sections/opening-hours';
 import { Portfolio } from '@/components/sections/portfolio';
+import { Reviews } from '@/components/sections/reviews';
 import { Services } from '@/components/sections/services';
 
 const sectionStub = (id: string, label: string) => (
@@ -29,7 +30,7 @@ export default function HomePage() {
       <Services />
       <Portfolio />
       <OpeningHours />
-      {sectionStub('bewertungen', 'Bewertungen')}
+      <Reviews />
       {sectionStub('kontakt', 'Kontakt')}
     </>
   );
