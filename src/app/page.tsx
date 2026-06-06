@@ -20,7 +20,7 @@ const sectionStub = (id: string, label: string) => (
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <Hero imageSrc="/images/hero.jpg" />
       {sectionStub('ueber-uns', 'Über uns')}
       {sectionStub('leistungen', 'Leistungen')}
       {sectionStub('oeffnungszeiten', 'Öffnungszeiten')}
