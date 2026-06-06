@@ -14,9 +14,6 @@ export function Contact() {
     >
       <div className="container-wide">
         <Reveal>
-          <p className="eyebrow mb-6">Kontakt</p>
-        </Reveal>
-        <Reveal delay={0.1}>
           <h2
             id="kontakt-h"
             className="font-display text-display italic text-cream"
@@ -37,27 +34,15 @@ export function Contact() {
           </Reveal>
         </div>
 
-        <div className="mt-20 grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-5">
-            <Reveal>
-              <p className="eyebrow mb-6">Termin anfragen</p>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h3 className="font-display text-3xl italic text-cream sm:text-4xl">
-                Schreib uns —
-                <br />
-                <span className="text-brass/90">wir antworten persönlich.</span>
-              </h3>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-6 max-w-prose text-cream/65">
-                Sag uns, was du dir vorstellst. Wir melden uns mit einem Vorschlag
-                für deinen Termin — meistens noch am selben Tag.
-              </p>
-            </Reveal>
-          </div>
+        <div className="mt-20 grid gap-12 border-t border-stone-700/60 pt-16 lg:grid-cols-12 lg:gap-16 lg:pt-20">
+          <Reveal className="lg:col-span-5">
+            <p className="font-display text-2xl italic text-cream sm:text-3xl">
+              Schreib uns, wir antworten persönlich.{' '}
+              <span className="text-brass/90">Meistens noch am selben Tag.</span>
+            </p>
+          </Reveal>
 
-          <Reveal delay={0.25} className="lg:col-span-7">
+          <Reveal delay={0.15} className="lg:col-span-7">
             <ContactForm />
           </Reveal>
         </div>

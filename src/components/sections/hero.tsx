@@ -15,7 +15,7 @@ export function Hero({ imageSrc }: HeroProps) {
     >
       <HeroBackground
         src={imageSrc}
-        alt="Italienischer Friseur — Hände führen die Schere im warmen Tungsten-Licht"
+        alt="Italienischer Friseur, Hände führen die Schere im warmen Tungsten-Licht"
       />
 
       <div className="relative z-10 container-default pb-28 pt-40 md:pb-40">
@@ -25,8 +25,11 @@ export function Hero({ imageSrc }: HeroProps) {
 
         <HeroHeadline />
 
-        <p className="mt-10 max-w-prose text-lg text-cream/75 animate-fade-up [animation-delay:1.6s] md:text-xl">
-          Friseurhandwerk mit der Seele Italiens. Seit{' '}
+        <p className="mt-10 max-w-prose font-display text-lg italic text-cream/85 animate-fade-up [animation-delay:1.6s] md:text-xl">
+          Forbice, mano, pazienza.
+        </p>
+        <p className="mt-4 max-w-prose text-base text-cream/65 animate-fade-up [animation-delay:1.7s]">
+          Italienisches Friseurhandwerk seit{' '}
           <span className="text-brass">[JAHR]</span> mitten in Münster-Nord.
         </p>
 

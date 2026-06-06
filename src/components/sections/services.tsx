@@ -21,21 +21,21 @@ const services: readonly Service[] = [
     icon: Scissors,
     title: 'Damen Schnitt & Styling',
     description:
-      'Präziser Schnitt, geschmeidiges Finish. Wir lesen deine Haarstruktur — und arbeiten mit ihr.',
+      'Präziser Schnitt, geschmeidiges Finish. Wir lesen deine Haarstruktur und arbeiten mit ihr.',
     priceFrom: '[ab €XX]',
   },
   {
     icon: Wand2,
     title: 'Herren Schnitt & Bart',
     description:
-      'Classic, Fade oder eigenwillig. Kurz oder lang, mit Bart oder ohne — handgeführt, nicht abgewickelt.',
+      'Classic, Fade oder eigenwillig. Kurz oder lang, mit Bart oder ohne, immer handgeführt.',
     priceFrom: '[ab €XX]',
   },
   {
     icon: Droplet,
     title: 'Coloration & Strähnen',
     description:
-      'Von Caramel bis Mailand-Schwarz. Volle Tönung, Strähnen oder Balayage — gemischt für deinen Teint.',
+      'Von Caramel bis Mailand-Schwarz. Volle Tönung, Strähnen oder Balayage, gemischt für deinen Teint.',
     priceFrom: '[ab €XX]',
   },
   {
@@ -71,17 +71,19 @@ export function Services() {
       <div className="container-wide">
         <div className="max-w-2xl">
           <Reveal>
-            <p className="eyebrow mb-6">Unsere Leistungen</p>
-          </Reveal>
-          <Reveal delay={0.1}>
             <h2
               id="leistungen-h"
               className="font-display text-display italic text-cream"
             >
-              Italienisches Handwerk —
+              Sechs Handgriffe.
               <br />
-              <span className="text-brass/90">auf den Punkt.</span>
+              <span className="text-brass/90">Eine Schule.</span>
             </h2>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="mt-6 max-w-prose text-lg text-cream/70">
+              Vom Schnitt bis zur Coloration. Dal taglio al colore.
+            </p>
           </Reveal>
         </div>
 

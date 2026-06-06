@@ -30,22 +30,19 @@ export function Portfolio() {
         <div className="flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <Reveal>
-              <p className="eyebrow mb-6">Unsere Arbeiten</p>
-            </Reveal>
-            <Reveal delay={0.1}>
               <h2
                 id="portfolio-h"
                 className="font-display text-display italic text-cream"
               >
-                Eine Auswahl —
+                Was hier
                 <br />
-                <span className="text-brass/90">aus dem Salon.</span>
+                <span className="text-brass/90">passiert.</span>
               </h2>
             </Reveal>
           </div>
-          <Reveal delay={0.2}>
+          <Reveal delay={0.15}>
             <p className="max-w-xs text-cream/60">
-              Klicke ein Motiv an, um es größer zu sehen. Foto-Material folgt —
+              Klicke ein Motiv an, um es größer zu sehen. Foto-Material folgt,
               die Layouts stehen bereits.
             </p>
           </Reveal>

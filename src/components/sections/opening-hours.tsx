@@ -33,26 +33,25 @@ export function OpeningHours() {
     >
       <div className="container-default">
         <Reveal>
-          <p className="eyebrow mb-6">Wir sind für dich da</p>
-        </Reveal>
-        <Reveal delay={0.1}>
           <h2
             id="oeffnungszeiten-h"
             className="font-display text-display italic text-cream"
           >
-            Öffnungszeiten.
+            Wann wir
+            <br />
+            <span className="text-brass/90">da sind.</span>
           </h2>
         </Reveal>
 
-        <Reveal delay={0.2}>
+        <Reveal delay={0.15}>
           <StatusBadge status={status} reduceMotion={!!reduceMotion} />
         </Reveal>
 
-        <Reveal delay={0.3}>
+        <Reveal delay={0.25}>
           <HoursTable todayKey={status?.todayKey ?? null} />
         </Reveal>
 
-        <Reveal delay={0.4}>
+        <Reveal delay={0.35}>
           <p className="mt-10 flex items-center gap-3 text-eyebrow uppercase tracking-eyebrow text-stone-500">
             <Clock className="h-3 w-3" strokeWidth={1.5} />
             Zeitzone Europe/Berlin · Live-Status

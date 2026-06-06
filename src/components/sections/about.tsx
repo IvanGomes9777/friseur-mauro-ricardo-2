@@ -19,10 +19,6 @@ export function About() {
       <div className="container-wide grid items-center gap-16 lg:grid-cols-12 lg:gap-20">
         <div className="lg:col-span-7">
           <Reveal from="left">
-            <p className="eyebrow mb-6">Unsere Geschichte</p>
-          </Reveal>
-
-          <Reveal from="left" delay={0.1}>
             <h2
               id="ueber-uns-h"
               className="font-display text-display italic text-cream"
@@ -33,7 +29,7 @@ export function About() {
             </h2>
           </Reveal>
 
-          <Reveal from="left" delay={0.2}>
+          <Reveal from="left" delay={0.15}>
             <div className="mt-10 max-w-prose space-y-5 text-lg text-cream/75">
               <p>
                 Seit über zwei Jahrzehnten steht Mauro Ricardo für
@@ -42,13 +38,15 @@ export function About() {
                 überdauert hat.
               </p>
               <p>
-                Bei uns ist nichts Standard. Wir nehmen uns Zeit — für deinen
-                Schnitt, für deinen Espresso, für ein Gespräch. So wie zuhause.
+                Bei uns ist nichts Standard. Wir nehmen uns Zeit für deinen
+                Schnitt, für deinen Espresso, für ein Gespräch.{' '}
+                <span className="italic text-brass/90">Senza fretta.</span> So
+                wie zuhause.
               </p>
             </div>
           </Reveal>
 
-          <Reveal from="left" delay={0.3}>
+          <Reveal from="left" delay={0.25}>
             <dl className="mt-14 grid grid-cols-3 gap-6 border-t border-stone-700/60 pt-10">
               {stats.map((stat) => (
                 <div key={stat.label} className="flex flex-col gap-2">
