@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Footer } from '@/components/sections/footer';
 import { Navbar } from '@/components/sections/navbar';
+import { CallFab } from '@/components/ui/call-fab';
 import { fontDisplay, fontSans } from '@/lib/fonts';
 import { site } from '@/lib/site';
 import { cn } from '@/lib/utils';
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main id="main">{children}</main>
         <Footer />
+        <CallFab />
       </body>
     </html>
   );
