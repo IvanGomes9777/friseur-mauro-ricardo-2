@@ -6,7 +6,16 @@ export type Review = {
   quote: string;
 };
 
-export const reviews: readonly Review[] = [
+export type ReviewsData = {
+  reviews: Review[];
+  meta: {
+    average: number;
+    count: number;
+  };
+  source: 'google' | 'static';
+};
+
+const staticReviews: readonly Review[] = [
   {
     id: 'di-piazza',
     author: 'Di Piazza Uomo E Donna',
@@ -32,3 +41,11 @@ export const reviews: readonly Review[] = [
       'Ich war dort zum Spitzen schneiden und wurde von einer sehr freundlichen jungen Frau empfangen. Sie beriet mich sehr gut und schnitt mir meine Haare wirklich schön.',
   },
 ] as const;
+
+const staticData: ReviewsData = {
+  reviews: [...staticReviews],
+  meta: { average: 4.6, count: 84 },
+  source: 'static',
+};
+
+export { staticData };

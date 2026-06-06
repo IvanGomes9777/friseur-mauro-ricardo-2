@@ -1,11 +1,13 @@
 import { ArrowUpRight, Quote, Star } from 'lucide-react';
 import { Reveal } from '@/components/ui/reveal';
-import { reviews, type Review } from '@/lib/reviews';
+import { getReviewsData } from '@/lib/google-reviews';
+import type { Review } from '@/lib/reviews';
 import { site } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
-export function Reviews() {
-  const ratingLabel = site.rating.average.toFixed(1).replace('.', ',');
+export async function Reviews() {
+  const { reviews, meta } = await getReviewsData();
+  const ratingLabel = meta.average.toFixed(1).replace('.', ',');
 
   return (
     <section
@@ -23,7 +25,7 @@ export function Reviews() {
                   strokeWidth={1.5}
                 />
                 <span>
-                  {ratingLabel} auf Google · {site.rating.count} Rezensionen
+                  {ratingLabel} auf Google · {meta.count} Rezensionen
                 </span>
               </p>
             </Reveal>
@@ -134,10 +136,7 @@ function Stars({ rating }: { rating: number }) {
 function GoogleBadge() {
   return (
     <span className="inline-flex items-center gap-2 border border-stone-700/80 px-3 py-1.5 text-eyebrow uppercase tracking-eyebrow text-cream/70">
-      <span
-        aria-hidden
-        className="font-display text-sm italic text-brass"
-      >
+      <span aria-hidden className="font-display text-sm italic text-brass">
         G
       </span>
       Google

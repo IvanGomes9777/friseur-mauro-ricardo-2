@@ -39,7 +39,7 @@ Diese Angaben werden für ein rechtssicheres Impressum (§ 5 TMG / § 18 MStV) u
 - [ ] **Mail-Versand-Backend** wählen: Resend (empfohlen, EU-Hosting möglich) oder SMTP-Fallback
 - [ ] **Anti-Spam**: Honeypot + Rate-Limit (kein reCAPTCHA — DSGVO-Probleme)
 - [ ] **Google Maps Embed** — Place-ID ermitteln (für interaktive Karte)
-- [ ] **Google Business Profil** — Place-ID für Live-Bewertungen (falls Live-API genutzt wird, sonst statisch)
+- [ ] **Google Places API — Live Reviews Sync**: Inhaber muss eine **Google Cloud Konsole** öffnen, **Places API (New)** aktivieren, einen API-Key erstellen (mit HTTP-Referrer-Restriction auf die finale Domain!) und die **Place ID** ermitteln. Beide als `GOOGLE_PLACES_API_KEY` + `GOOGLE_PLACES_PLACE_ID` in den Vercel-Envs setzen. Bis dahin fällt die Section automatisch auf den statischen Snapshot zurück. Revalidate alle 6 h → ~4 Calls/Tag = praktisch $0.
 - [ ] **WhatsApp Business** Nummer? (falls als Kontakt-Kanal gewünscht)
 - [ ] **Domain** registrieren (Vorschlag: `mauro-ricardo.de` oder `friseur-mauro-ricardo.de`)
 
