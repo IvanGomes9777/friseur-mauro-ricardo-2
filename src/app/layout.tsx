@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Navbar } from '@/components/sections/navbar';
 import { fontDisplay, fontSans } from '@/lib/fonts';
 import { site } from '@/lib/site';
 import { cn } from '@/lib/utils';
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Zum Hauptinhalt springen
         </a>
+        <Navbar />
         <main id="main">{children}</main>
       </body>
     </html>
