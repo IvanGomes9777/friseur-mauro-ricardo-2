@@ -9,7 +9,7 @@ import { Services } from '@/components/sections/services';
 export default function HomePage() {
   return (
     <>
-      <Hero imageSrc="/images/hero.jpg" />
+      <Hero imageSrc="/images/hero.jpg" videoSrc="/videos/hero.mp4" />
       <About />
       <Services />
       <Portfolio />
