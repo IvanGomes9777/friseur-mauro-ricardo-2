@@ -6,10 +6,11 @@ import { useRef } from 'react';
 
 type HeroBackgroundProps = {
   src?: string;
+  videoSrc?: string;
   alt: string;
 };
 
-export function HeroBackground({ src, alt }: HeroBackgroundProps) {
+export function HeroBackground({ src, videoSrc, alt }: HeroBackgroundProps) {
   const reduceMotion = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -30,7 +31,19 @@ export function HeroBackground({ src, alt }: HeroBackgroundProps) {
         transition={{ duration: 3.5, ease: [0.22, 1, 0.36, 1] }}
         className="absolute inset-0"
       >
-        {src ? (
+        {videoSrc && !reduceMotion ? (
+          <video
+            src={videoSrc}
+            poster={src}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-label={alt}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : src ? (
           <Image
             src={src}
             alt={alt}

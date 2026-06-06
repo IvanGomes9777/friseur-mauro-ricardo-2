@@ -5,9 +5,10 @@ import { HeroScrollIndicator } from './hero-scroll-indicator';
 
 type HeroProps = {
   imageSrc?: string;
+  videoSrc?: string;
 };
 
-export function Hero({ imageSrc }: HeroProps) {
+export function Hero({ imageSrc, videoSrc }: HeroProps) {
   return (
     <section
       aria-label="Hero"
@@ -15,6 +16,7 @@ export function Hero({ imageSrc }: HeroProps) {
     >
       <HeroBackground
         src={imageSrc}
+        videoSrc={videoSrc}
         alt="Italienischer Friseur, Hände führen die Schere im warmen Tungsten-Licht"
       />
 
