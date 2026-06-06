@@ -9,7 +9,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.fullName} — ${site.tagline}`,
+    default: `${site.fullName}, ${site.tagline}`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     locale: site.locale,
     url: site.url,
     siteName: site.fullName,
-    title: `${site.fullName} — ${site.tagline}`,
+    title: `${site.fullName}, ${site.tagline}`,
     description: site.description,
   },
   twitter: {

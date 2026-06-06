@@ -9,7 +9,7 @@ export function Logo({ className }: LogoProps) {
   return (
     <Link
       href="/"
-      aria-label="Mauro Ricardo — Startseite"
+      aria-label="Mauro Ricardo, zur Startseite"
       className={cn(
         'group inline-flex items-baseline gap-2 leading-none transition-colors',
         className,

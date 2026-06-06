@@ -10,6 +10,8 @@ export async function Reviews() {
   const ratingLabel = meta.average.toFixed(1).replace('.', ',');
   const [featured, ...rest] = reviews;
 
+  if (!featured) return null;
+
   return (
     <section
       id="bewertungen"

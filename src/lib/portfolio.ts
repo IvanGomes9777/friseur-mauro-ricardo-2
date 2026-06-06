@@ -17,7 +17,7 @@ export const portfolio: readonly PortfolioItem[] = [
   },
   {
     id: 'italian-classic',
-    label: 'Italian Cut — Classic',
+    label: 'Italian Classic',
     category: 'Herren',
     aspect: 'square',
     gradient:

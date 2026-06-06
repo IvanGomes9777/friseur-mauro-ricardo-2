@@ -49,7 +49,7 @@ const services: readonly Service[] = [
     icon: Leaf,
     title: 'Pflege & Treatments',
     description:
-      'Tiefenpflege, Keratin oder Glanzbehandlung. Damit dein Haar nicht nur fällt, sondern fließt.',
+      'Tiefenpflege, Keratin oder Glanzbehandlung, damit dein Haar wieder fließt.',
     priceFrom: '[ab €XX]',
   },
   {

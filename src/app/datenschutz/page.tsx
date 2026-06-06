@@ -42,7 +42,7 @@ export default function DatenschutzPage() {
       <p>
         Zuständige Aufsichtsbehörde: Landesbeauftragte für Datenschutz und
         Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213
-        Düsseldorf —{' '}
+        Düsseldorf.{' '}
         <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">
           ldi.nrw.de
         </a>
@@ -141,7 +141,7 @@ export default function DatenschutzPage() {
       <p>
         Sofern aktiviert, rufen wir die aktuellen Google-Bewertungen für unseren
         Salon über die <strong>Google Places API</strong> ab. Der Abruf erfolgt{' '}
-        <strong>serverseitig</strong> — es werden keine personenbezogenen Daten
+        <strong>serverseitig</strong>, es werden keine personenbezogenen Daten
         des Website-Besuchers an Google übermittelt. Es wird lediglich der
         bestehende, öffentliche Inhalt unseres Google-Business-Profils angezeigt.
       </p>

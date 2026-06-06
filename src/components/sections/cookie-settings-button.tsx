@@ -32,7 +32,7 @@ export function CookieSettingsButton() {
       type="button"
       onClick={reset}
       className={cn(
-        'inline-flex items-center gap-2 transition-colors',
+        'inline-flex min-h-11 items-center gap-2 py-2 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass',
         feedback ? 'text-brass' : 'text-cream/60 hover:text-brass',
       )}
     >
