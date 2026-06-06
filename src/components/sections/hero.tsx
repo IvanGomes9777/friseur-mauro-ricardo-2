@@ -1,0 +1,44 @@
+import { BookingButton } from '@/components/ui/booking-button';
+import { HeroBackground } from './hero-background';
+import { HeroHeadline } from './hero-headline';
+import { HeroScrollIndicator } from './hero-scroll-indicator';
+
+type HeroProps = {
+  imageSrc?: string;
+};
+
+export function Hero({ imageSrc }: HeroProps) {
+  return (
+    <section
+      aria-label="Hero"
+      className="relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden bg-espresso-deep"
+    >
+      <HeroBackground
+        src={imageSrc}
+        alt="Italienischer Friseur — Hände führen die Schere im warmen Tungsten-Licht"
+      />
+
+      <div className="relative z-10 container-default pb-28 pt-40 md:pb-40">
+        <p className="eyebrow mb-8 animate-fade-up [animation-delay:0.15s]">
+          100% Italian Hairstyle · Münster
+        </p>
+
+        <HeroHeadline />
+
+        <p className="mt-10 max-w-prose text-lg text-cream/75 animate-fade-up [animation-delay:1.6s] md:text-xl">
+          Friseurhandwerk mit der Seele Italiens. Seit{' '}
+          <span className="text-brass">[JAHR]</span> mitten in Münster-Nord.
+        </p>
+
+        <div className="mt-12 flex flex-col gap-4 animate-fade-up [animation-delay:1.8s] sm:flex-row sm:items-center">
+          <BookingButton />
+          <BookingButton href="#leistungen" variant="ghost">
+            Unsere Leistungen
+          </BookingButton>
+        </div>
+      </div>
+
+      <HeroScrollIndicator />
+    </section>
+  );
+}
