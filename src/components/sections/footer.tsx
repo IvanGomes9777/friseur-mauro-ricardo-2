@@ -30,7 +30,7 @@ export function Footer() {
                   <li key={item.label}>
                     <a
                       href={item.href}
-                      aria-label={`${item.label} — Link folgt`}
+                      aria-label={`${item.label}, Link folgt`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group inline-flex h-11 w-11 items-center justify-center border border-stone-700/80 text-cream/70 transition-all duration-500 ease-cinematic hover:border-brass hover:bg-brass/5 hover:text-brass"

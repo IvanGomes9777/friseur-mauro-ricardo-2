@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { BookingButton } from '@/components/ui/booking-button';
 import { Logo } from '@/components/ui/logo';
+import { useFocusTrap } from '@/lib/hooks/use-focus-trap';
 import { useScrolled } from '@/lib/hooks/use-scrolled';
 import { navItems } from '@/lib/nav';
 import { cn } from '@/lib/utils';
@@ -14,6 +15,7 @@ export function Navbar() {
   const scrolled = useScrolled(80);
   const [open, setOpen] = useState(false);
   const reduceMotion = useReducedMotion();
+  const trapRef = useFocusTrap<HTMLDivElement>(open);
 
   useEffect(() => {
     if (!open) return;
@@ -82,6 +84,7 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
+            ref={trapRef}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

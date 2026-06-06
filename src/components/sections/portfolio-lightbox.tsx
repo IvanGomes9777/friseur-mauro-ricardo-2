@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useCallback, useEffect } from 'react';
+import { useFocusTrap } from '@/lib/hooks/use-focus-trap';
 import { portfolio } from '@/lib/portfolio';
 
 type PortfolioLightboxProps = {
@@ -15,6 +16,7 @@ type PortfolioLightboxProps = {
 export function PortfolioLightbox({ index, onClose, onPrev, onNext }: PortfolioLightboxProps) {
   const reduceMotion = useReducedMotion();
   const item = index !== null ? portfolio[index] : null;
+  const trapRef = useFocusTrap<HTMLDivElement>(index !== null);
 
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
@@ -40,9 +42,10 @@ export function PortfolioLightbox({ index, onClose, onPrev, onNext }: PortfolioL
     <AnimatePresence>
       {item && index !== null && (
         <motion.div
+          ref={trapRef}
           role="dialog"
           aria-modal="true"
-          aria-label={`${item.label} — Vorschau`}
+          aria-label={`${item.label}, Vorschau`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
