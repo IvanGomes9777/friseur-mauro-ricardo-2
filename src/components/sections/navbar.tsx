@@ -74,7 +74,7 @@ export function Navbar() {
             onClick={() => setOpen(true)}
             aria-label="Menü öffnen"
             aria-expanded={open}
-            className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-sm text-cream transition-colors hover:text-brass lg:hidden"
+            className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-full text-cream transition-colors hover:text-brass lg:hidden"
           >
             <Menu className="h-6 w-6" strokeWidth={1.5} />
           </button>
@@ -102,7 +102,7 @@ export function Navbar() {
                   type="button"
                   onClick={() => setOpen(false)}
                   aria-label="Menü schließen"
-                  className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-sm text-cream transition-colors hover:text-brass"
+                  className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-full text-cream transition-colors hover:text-brass"
                 >
                   <X className="h-6 w-6" strokeWidth={1.5} />
                 </button>
