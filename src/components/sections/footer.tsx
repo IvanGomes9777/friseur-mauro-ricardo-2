@@ -23,25 +23,29 @@ export function Footer() {
               Im Herzen von Münster-Nord.
             </p>
 
-            <ul className="mt-10 flex gap-3">
-              {socialLinks.map((item) => {
-                const Icon = socialIcons[item.label as keyof typeof socialIcons];
-                return (
-                  <li key={item.label}>
-                    <a
-                      href={item.href}
-                      aria-label={`${item.label} — Link folgt`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group inline-flex h-11 w-11 items-center justify-center border border-stone-700/80 text-cream/70 transition-all duration-500 ease-cinematic hover:border-brass hover:bg-brass/5 hover:text-brass"
-                      title={item.placeholder ? `${item.label} (Link folgt)` : item.label}
-                    >
-                      <Icon className="h-4 w-4" strokeWidth={1.5} />
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
+            {socialLinks.filter((item) => !item.placeholder).length > 0 && (
+              <ul className="mt-10 flex gap-3">
+                {socialLinks
+                  .filter((item) => !item.placeholder)
+                  .map((item) => {
+                    const Icon = socialIcons[item.label as keyof typeof socialIcons];
+                    return (
+                      <li key={item.label}>
+                        <a
+                          href={item.href}
+                          aria-label={item.label}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group inline-flex h-11 w-11 items-center justify-center border border-stone-700/80 text-cream/70 transition-all duration-500 ease-cinematic hover:border-brass hover:bg-brass/5 hover:text-brass"
+                          title={item.label}
+                        >
+                          <Icon className="h-4 w-4" strokeWidth={1.5} />
+                        </a>
+                      </li>
+                    );
+                  })}
+              </ul>
+            )}
           </div>
 
           <nav aria-label="Footer-Navigation" className="lg:col-span-3">

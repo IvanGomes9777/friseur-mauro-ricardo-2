@@ -123,3 +123,16 @@ Workflow je Section: Konzept → Designfreigabe → Code → Review → Commit �
 - [x] Branch `claude/relaxed-edison-0LMiU` initialisiert
 - [x] Design-Konzept-Draft erstellt (siehe `docs/design/design-system.md`)
 - [x] Legal-Drafts mit Platzhaltern erstellt (siehe `docs/legal/`)
+- [x] Rechts-Audit Juni 2026 — Site ist technisch sauber: keine externen Bilder, keine externen Fonts, kein Tracking, kein Drittlandstransfer
+- [x] Footer-Social-Icons: rendern jetzt bedingt (nur wenn `placeholder !== true`) — kein „Link folgt"-Tooltip mehr → kein § 5a UWG-Risiko
+
+## 🟡 SOCIAL-MEDIA SWITCH-ON
+
+Sobald Mauro echte Profile liefert: in `src/lib/legal.ts` die Einträge ändern, dann erscheinen die Icons automatisch im Footer.
+
+```ts
+export const socialLinks = [
+  { label: 'Instagram', href: 'https://instagram.com/<handle>', placeholder: false },
+  { label: 'Facebook', href: 'https://facebook.com/<handle>', placeholder: false },
+] as const;
+```
