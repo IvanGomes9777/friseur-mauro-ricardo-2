@@ -68,23 +68,23 @@ Diese Angaben werden für ein rechtssicheres Impressum (§ 5 TMG / § 18 MStV) u
 
 Workflow je Section: Konzept → Designfreigabe → Code → Review → Commit → nächste Section.
 
-- [ ] **Section 1**: Navbar (fixiert, sticky, „Termin buchen"-CTA)
-- [ ] **Section 2**: Hero (cinematisches Video/Foto + Headline + CTA)
-- [ ] **Section 3**: Über uns (Storytelling, Mauro & Team)
-- [ ] **Section 4**: Leistungen (Cards mit Hover-Animationen)
-- [ ] **Section 5**: Portfolio (Thumbnail-Grid + Lightbox)
-- [ ] **Section 6**: Öffnungszeiten (zeitzonenbasiert, „heute offen/geschlossen")
-- [ ] **Section 7**: Google-Bewertungen (max. 3 Top-Reviews)
-- [ ] **Section 8**: Kontakt (Adresse, Telefon, Maps-Embed)
-- [ ] **Section 9**: Footer (Quick-Links + Legal + Cookie-Settings)
+- [x] **Section 1**: Navbar ✅
+- [x] **Section 2**: Hero ✅
+- [x] **Section 3**: Über uns ✅
+- [x] **Section 4**: Leistungen ✅
+- [x] **Section 5**: Portfolio ✅
+- [x] **Section 6**: Öffnungszeiten ✅
+- [x] **Section 7**: Google-Bewertungen ✅ (live sync via Places API)
+- [x] **Section 8**: Kontakt ✅ (Maps Click-to-Load + Formular)
+- [x] **Section 9**: Footer (Quick-Links + Legal + Cookie-Settings) ✅
 
 ## 🟡 LEGAL-SEITEN
 
-- [ ] `/impressum` — Pflichtangaben final einsetzen
-- [ ] `/datenschutz` — finale Dienste-Liste (Vercel, Plausible, Google Maps, Fonts lokal)
-- [ ] `/agb` — nur erstellen, wenn Stornogebühren o. ä. greifen
-- [ ] **Cookie-Consent-Banner** — echtes Opt-In, granular (technisch nötig vs. Maps/Analytics)
-- [ ] „Cookie-Einstellungen"-Link im Footer (erneutes Öffnen des Consent-Banners)
+- [x] `/impressum` — Seite live mit Platzhaltern (Inhaber muss [PLATZHALTER]-Felder ersetzen)
+- [x] `/datenschutz` — Seite live (Vercel, Resend, Maps-Consent, lokale Fonts, Places API dokumentiert)
+- [x] `/agb` — Seite live (Stornoregelungen als „werden finalisiert" — final mit Inhaber abstimmen)
+- [x] „Cookie-Einstellungen"-Button im Footer (resettet aktuell die Maps-Consent, reload)
+- [ ] **Globaler Cookie-Consent-Banner** mit granularen Kategorien (Konzept in `docs/legal/cookie-consent.md` — wird relevant sobald Analytics dazukommt)
 
 ## 🟢 SEO / MARKETING
 

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Footer } from '@/components/sections/footer';
 import { Navbar } from '@/components/sections/navbar';
 import { fontDisplay, fontSans } from '@/lib/fonts';
 import { site } from '@/lib/site';
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <Navbar />
         <main id="main">{children}</main>
+        <Footer />
       </body>
     </html>
   );

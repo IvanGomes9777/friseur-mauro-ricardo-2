@@ -66,6 +66,45 @@
   }
 }
 
+@layer components {
+  .legal-prose {
+    @apply text-cream/80;
+  }
+  .legal-prose h2 {
+    @apply mt-12 font-display text-2xl italic text-cream sm:text-3xl;
+  }
+  .legal-prose h2:first-child {
+    @apply mt-0;
+  }
+  .legal-prose h3 {
+    @apply mt-10 font-display text-xl italic text-brass/90;
+  }
+  .legal-prose p {
+    @apply mt-4 max-w-prose leading-relaxed;
+  }
+  .legal-prose ul {
+    @apply mt-4 max-w-prose space-y-2 pl-0;
+  }
+  .legal-prose ul li {
+    @apply relative pl-5 leading-relaxed before:absolute before:left-0 before:top-2.5 before:block before:h-px before:w-3 before:bg-brass;
+  }
+  .legal-prose strong {
+    @apply text-cream;
+  }
+  .legal-prose a {
+    @apply text-brass underline-offset-4 hover:underline;
+  }
+  .legal-prose hr {
+    @apply my-12 border-stone-700/60;
+  }
+  .legal-prose address {
+    @apply mt-4 max-w-prose not-italic leading-relaxed;
+  }
+  .legal-prose .placeholder {
+    @apply rounded-sm bg-brass/10 px-2 py-0.5 text-brass;
+  }
+}
+
 @layer utilities {
   .grain::before {
     content: '';
