@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 export async function Reviews() {
   const { reviews, meta } = await getReviewsData();
   const ratingLabel = meta.average.toFixed(1).replace('.', ',');
+  const [featured, ...rest] = reviews;
 
   return (
     <section
@@ -56,64 +57,108 @@ export async function Reviews() {
           </Reveal>
         </div>
 
-        <ul className="mt-16 hidden gap-px overflow-hidden border border-stone-700/60 bg-stone-700/60 lg:mt-20 lg:grid lg:grid-cols-3">
-          {reviews.map((review, i) => (
-            <Reveal key={review.id} as="li" delay={i * 0.08} className="h-full">
-              <ReviewCard review={review} />
-            </Reveal>
-          ))}
-        </ul>
+        {featured && (
+          <Reveal delay={0.25}>
+            <FeaturedReview review={featured} />
+          </Reveal>
+        )}
 
-        <div
-          aria-label="Bewertungen, horizontal scrollbar"
-          className="-mx-6 mt-16 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 lg:hidden"
-          style={{ scrollbarWidth: 'none' }}
-        >
-          {reviews.map((review) => (
-            <div
-              key={review.id}
-              className="w-[88%] shrink-0 snap-center border border-stone-700/60 sm:w-[70%]"
-            >
-              <ReviewCard review={review} />
-            </div>
-          ))}
-        </div>
+        {rest.length > 0 && (
+          <div className="mt-16 grid gap-px overflow-hidden border-t border-stone-700/60 sm:grid-cols-2 lg:gap-12 lg:border-0">
+            {rest.map((review, i) => (
+              <Reveal key={review.id} delay={i * 0.1}>
+                <SecondaryReview review={review} index={i} />
+              </Reveal>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
 }
 
-function ReviewCard({ review }: { review: Review }) {
+function FeaturedReview({ review }: { review: Review }) {
   return (
-    <article className="group relative flex h-full flex-col gap-6 bg-espresso p-8 transition-colors duration-500 ease-cinematic hover:bg-espresso-deep sm:p-10">
+    <figure className="relative mt-16 overflow-hidden lg:mt-20">
       <Quote
         aria-hidden
-        className="absolute right-6 top-6 h-12 w-12 text-stone-700/60 transition-colors duration-500 group-hover:text-brass/20 sm:right-8 sm:top-8"
-        strokeWidth={1}
+        className="absolute -left-4 -top-8 h-40 w-40 text-brass/10 sm:-left-6 sm:h-56 sm:w-56 lg:-left-8 lg:h-72 lg:w-72"
+        strokeWidth={0.5}
+      />
+
+      <div className="relative grid gap-10 pl-0 lg:grid-cols-12 lg:gap-16 lg:pl-20">
+        <div className="lg:col-span-2">
+          <Stars rating={review.rating} size="md" />
+        </div>
+
+        <div className="lg:col-span-10">
+          <blockquote className="font-display italic leading-[1.15] text-cream">
+            <span className="text-[clamp(1.75rem,3.5vw,3rem)]">
+              <span aria-hidden>„</span>
+              {review.quote}
+              <span aria-hidden>"</span>
+            </span>
+          </blockquote>
+
+          <figcaption className="mt-10 flex items-center gap-6 border-t border-stone-700/60 pt-6">
+            <cite className="not-italic">
+              <span className="block font-medium text-cream">
+                {review.author}
+              </span>
+              <span className="block text-eyebrow uppercase tracking-eyebrow text-stone-500">
+                {review.date}
+              </span>
+            </cite>
+            <span aria-hidden className="h-8 w-px bg-stone-700/80" />
+            <GoogleBadge />
+          </figcaption>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+function SecondaryReview({ review, index }: { review: Review; index: number }) {
+  return (
+    <article
+      className={cn(
+        'group relative flex flex-col gap-5 py-10 transition-colors duration-500 ease-cinematic sm:py-12',
+        index === 0 ? 'sm:pr-10 lg:pr-0' : 'sm:pl-10 lg:pl-0',
+      )}
+    >
+      <span
+        aria-hidden
+        className={cn(
+          'absolute top-0 h-px bg-stone-700/60 sm:hidden',
+          'left-0 right-0',
+        )}
       />
 
       <Stars rating={review.rating} />
 
-      <blockquote className="flex-1 font-display text-lg italic leading-relaxed text-cream/90 sm:text-xl">
+      <blockquote className="font-display text-lg italic leading-relaxed text-cream/85 sm:text-xl">
         <span aria-hidden>„</span>
         {review.quote}
         <span aria-hidden>"</span>
       </blockquote>
 
-      <footer className="flex items-end justify-between gap-4 border-t border-stone-700/60 pt-5">
+      <footer className="mt-auto flex items-end justify-between gap-4 pt-2">
         <div className="flex flex-col gap-1">
-          <cite className="not-italic font-medium text-cream">{review.author}</cite>
+          <cite className="not-italic font-medium text-cream">
+            {review.author}
+          </cite>
           <span className="text-eyebrow uppercase tracking-eyebrow text-stone-500">
             {review.date}
           </span>
         </div>
-        <GoogleBadge />
+        <GoogleBadge subtle />
       </footer>
     </article>
   );
 }
 
-function Stars({ rating }: { rating: number }) {
+function Stars({ rating, size = 'sm' }: { rating: number; size?: 'sm' | 'md' }) {
+  const dim = size === 'md' ? 'h-5 w-5' : 'h-4 w-4';
   return (
     <div
       className="flex items-center gap-1"
@@ -123,7 +168,7 @@ function Stars({ rating }: { rating: number }) {
         <Star
           key={i}
           className={cn(
-            'h-4 w-4',
+            dim,
             i < rating ? 'fill-brass text-brass' : 'text-stone-700',
           )}
           strokeWidth={1.5}
@@ -133,9 +178,16 @@ function Stars({ rating }: { rating: number }) {
   );
 }
 
-function GoogleBadge() {
+function GoogleBadge({ subtle = false }: { subtle?: boolean }) {
   return (
-    <span className="inline-flex items-center gap-2 border border-stone-700/80 px-3 py-1.5 text-eyebrow uppercase tracking-eyebrow text-cream/70">
+    <span
+      className={cn(
+        'inline-flex items-center gap-2 text-eyebrow uppercase tracking-eyebrow',
+        subtle
+          ? 'text-stone-500'
+          : 'border border-stone-700/80 px-3 py-1.5 text-cream/70',
+      )}
+    >
       <span aria-hidden className="font-display text-sm italic text-brass">
         G
       </span>
