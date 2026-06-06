@@ -32,10 +32,9 @@ export function About() {
           <Reveal from="left" delay={0.15}>
             <div className="mt-10 max-w-prose space-y-5 text-lg text-cream/75">
               <p>
-                Seit über zwei Jahrzehnten steht Mauro Ricardo für
-                italienischen Stil mitten in Münster-Nord. Eine Schere, geführt
-                mit der Ruhe eines Handwerks, das in Italien Generationen
-                überdauert hat.
+                Seit über zwanzig Jahren schneidet Mauro Ricardo italienischen
+                Stil in Münster-Nord. Die Schere wird geführt mit der Ruhe
+                eines Handwerks, das in Italien Generationen alt ist.
               </p>
               <p>
                 Bei uns ist nichts Standard. Wir nehmen uns Zeit für deinen

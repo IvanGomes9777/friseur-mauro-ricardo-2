@@ -27,7 +27,7 @@ export default function AgbPage() {
 
       <h2>Stornierung und Nichterscheinen</h2>
       <p>
-        Bitte sage uns Bescheid, wenn du einen Termin nicht wahrnehmen kannst —
+        Bitte sage uns Bescheid, wenn du einen Termin nicht wahrnehmen kannst,
         idealerweise mindestens 24 Stunden im Voraus. So können wir die freie Zeit
         an andere Gäste vergeben.
       </p>
@@ -40,15 +40,15 @@ export default function AgbPage() {
       <h2>Preise und Zahlung</h2>
       <p>
         Die jeweils gültigen Preise findest du auf unserer Preisliste im Salon.
-        Die Zahlung erfolgt vor Ort nach der Behandlung — in bar oder per
+        Die Zahlung erfolgt vor Ort nach der Behandlung, in bar oder per
         Kartenzahlung.
       </p>
 
       <h2>Gewährleistung</h2>
       <p>
         Solltest du mit dem Ergebnis nicht vollumfänglich zufrieden sein, sprich
-        uns bitte direkt im Salon oder unmittelbar nach deinem Besuch darauf an —
-        wir nehmen das ernst und finden eine Lösung.
+        uns bitte direkt im Salon oder unmittelbar nach deinem Besuch darauf an.
+        Wir nehmen das ernst und finden eine Lösung.
       </p>
 
       <h2>Verbraucherstreitbeilegung</h2>

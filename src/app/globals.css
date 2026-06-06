@@ -19,6 +19,11 @@
     color: theme('colors.cream.DEFAULT');
     font-family: theme('fontFamily.sans');
     line-height: 1.65;
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   ::selection {

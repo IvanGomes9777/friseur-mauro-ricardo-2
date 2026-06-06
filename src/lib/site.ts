@@ -1,7 +1,7 @@
 export const site = {
   name: 'Mauro Ricardo',
   fullName: 'Friseursalon Mauro Ricardo',
-  tagline: 'Di Piazza Uomo E Donna — 100% Italy',
+  tagline: 'Di Piazza Uomo E Donna, 100% Italy',
   description:
     'Italienisches Friseurhandwerk im Herzen von Münster. Schnitt, Coloration und Styling mit der Seele Italiens.',
   url: 'https://mauro-ricardo.de',
