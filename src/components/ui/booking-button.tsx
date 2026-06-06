@@ -15,7 +15,7 @@ export function BookingButton({
   children = 'Termin buchen',
 }: BookingButtonProps) {
   const base =
-    'inline-flex min-h-11 items-center justify-center gap-2 rounded-sm px-5 py-3 text-eyebrow uppercase tracking-eyebrow font-medium transition-all duration-300 ease-cinematic focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass';
+    'inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3 text-eyebrow uppercase tracking-eyebrow font-medium transition-all duration-300 ease-cinematic focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass';
 
   const variants = {
     primary:

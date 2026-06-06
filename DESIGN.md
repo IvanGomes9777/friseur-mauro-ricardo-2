@@ -44,7 +44,6 @@ typography:
     letterSpacing: "0.2em"
 rounded:
   none: "0px"
-  sm: "2px"
   pill: "9999px"
 spacing:
   xs: "0.5rem"
@@ -58,8 +57,8 @@ components:
     backgroundColor: "{colors.brass}"
     textColor: "{colors.espresso-deep}"
     typography: "{typography.eyebrow}"
-    rounded: "{rounded.sm}"
-    padding: "10px 20px"
+    rounded: "{rounded.pill}"
+    padding: "12px 24px"
   button-primary-hover:
     backgroundColor: "{colors.brass-deep}"
     textColor: "{colors.cream}"
@@ -67,8 +66,8 @@ components:
     backgroundColor: "transparent"
     textColor: "{colors.brass}"
     typography: "{typography.eyebrow}"
-    rounded: "{rounded.sm}"
-    padding: "10px 20px"
+    rounded: "{rounded.pill}"
+    padding: "12px 24px"
   button-ghost-hover:
     backgroundColor: "{colors.brass}"
     textColor: "{colors.espresso-deep}"
@@ -153,9 +152,9 @@ This means the site never feels card-y. Cards are used sparingly (service grid, 
 
 ## 5. Components
 
-**`button-primary`.** Brass background, espresso-deep text, eyebrow type, sharp 2px corners. On hover: -0.5px translate-y, brass-deep background, brass glow shadow. Focus visible: 2px brass outline at 4px offset.
+**`button-primary`.** Brass background, espresso-deep text, eyebrow type, pill shape. The pill is the brand's softening counterpoint to the sharp grid bed used everywhere else, so the CTA reads warmer than the surrounding surface. On hover: -0.5px translate-y, brass-deep background, brass glow shadow. Focus visible: 2px brass outline at 4px offset.
 
-**`button-ghost`.** Transparent with brass/40 border, brass text. On hover: fills brass, text inverts to espresso-deep. Used as the secondary action paired with primary.
+**`button-ghost`.** Transparent pill with brass/40 border, brass text. On hover: fills brass, text inverts to espresso-deep. Used as the secondary action paired with primary.
 
 **`card-surface`.** Espresso surface, no rounded corners, no shadow. Border via the 1px stone-700/60 grid bed (services + reviews share this pattern — the grid lines ARE the card borders). On hover: drops to espresso-deep, a top hairline scales from left in brass.
 
@@ -185,6 +184,6 @@ This means the site never feels card-y. Cards are used sparingly (service grid, 
 - Don't number sections `01 / 02 / 03` as scaffolding. Numbered markers only earn their place when the section IS a sequence with order-bearing information.
 - Don't gradient-text the brass. The brass is a brand color, not a SaaS hero gimmick. Set it solid.
 - Don't use glassmorphism for decoration. The navbar backdrop-blur and the lightbox backdrop-blur are the only allowed uses — they serve readability, not vibe.
-- Don't add rounded corners to cards. The system is sharp. `rounded-sm` (2px) on buttons is the maximum; everything else is 0px.
+- Don't add rounded corners to cards. The system is sharp. Pill-shaped CTAs are the only soft surface; everything else stays at 0px.
 - Don't stage identical card grids. The services grid + reviews grid share the same visual pattern because they ARE the same archetype. A third "identical" grid would dilute the signal — find a different layout.
 - Don't add em dashes to body copy. The voice avoids them; use commas, colons, periods.
