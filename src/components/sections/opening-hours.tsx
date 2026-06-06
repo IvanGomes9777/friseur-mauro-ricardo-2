@@ -47,12 +47,12 @@ export function OpeningHours() {
           <StatusBadge status={status} reduceMotion={!!reduceMotion} />
         </Reveal>
 
-        <Reveal delay={0.25}>
+        <Reveal delay={0.3}>
           <HoursTable todayKey={status?.todayKey ?? null} />
         </Reveal>
 
-        <Reveal delay={0.35}>
-          <p className="mt-10 flex items-center gap-3 text-eyebrow uppercase tracking-eyebrow text-stone-500">
+        <Reveal delay={0.4}>
+          <p className="mt-8 flex items-center gap-3 text-eyebrow uppercase tracking-eyebrow text-stone-500">
             <Clock className="h-3 w-3" strokeWidth={1.5} />
             Zeitzone Europe/Berlin · Live-Status
           </p>
@@ -69,8 +69,14 @@ function StatusBadge({
   status: SalonStatus | null;
   reduceMotion: boolean;
 }) {
+  const stateLabel = status === null
+    ? 'Status wird geladen'
+    : status.isOpen
+      ? 'Jetzt geöffnet'
+      : 'Heute geschlossen';
+
   return (
-    <div className="mt-12 inline-flex flex-col gap-4 border border-stone-700/60 bg-espresso/60 px-7 py-6 sm:flex-row sm:items-center sm:gap-6 sm:py-5">
+    <div className="mt-14">
       <AnimatePresence mode="wait">
         <motion.div
           key={status?.isOpen ? 'open' : status === null ? 'pending' : 'closed'}
@@ -78,47 +84,47 @@ function StatusBadge({
           animate={{ opacity: 1, y: 0 }}
           exit={reduceMotion ? undefined : { opacity: 0, y: -8 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="flex items-center gap-3"
+          className="flex flex-col gap-6"
         >
-          <span className="relative inline-flex h-3 w-3">
-            <span
-              aria-hidden
-              className={cn(
-                'absolute inset-0 rounded-full',
-                status === null && 'bg-stone-500',
-                status?.isOpen && 'bg-brass animate-pulse-soft',
-                status && !status.isOpen && 'bg-terracotta',
-              )}
-            />
-            {status?.isOpen && !reduceMotion && (
+          <div className="flex flex-wrap items-center gap-3 text-eyebrow uppercase tracking-eyebrow text-stone-500">
+            <span className="relative inline-flex h-2.5 w-2.5">
               <span
                 aria-hidden
-                className="absolute inset-0 rounded-full bg-brass/40 animate-ping"
+                className={cn(
+                  'absolute inset-0 rounded-full',
+                  status === null && 'bg-stone-500',
+                  status?.isOpen && 'bg-brass animate-pulse-soft',
+                  status && !status.isOpen && 'bg-terracotta',
+                )}
               />
+              {status?.isOpen && !reduceMotion && (
+                <span
+                  aria-hidden
+                  className="absolute inset-0 rounded-full bg-brass/40 animate-ping"
+                />
+              )}
+            </span>
+            <span className="text-cream">{stateLabel}</span>
+            {status && (
+              <>
+                <span aria-hidden className="text-stone-700">·</span>
+                <span>Heute · {germanDayLong[status.todayKey]}</span>
+              </>
             )}
-          </span>
-          <p className="text-eyebrow uppercase tracking-eyebrow text-cream">
-            {status === null
-              ? 'Status wird geladen'
-              : status.isOpen
-                ? 'Jetzt geöffnet'
-                : 'Geschlossen'}
+          </div>
+
+          <p className="font-display text-3xl italic leading-[1.1] text-cream sm:text-4xl md:text-[clamp(2.25rem,4vw,3.25rem)]">
+            {status?.message ?? ' '}
           </p>
         </motion.div>
       </AnimatePresence>
-
-      <span aria-hidden className="hidden h-6 w-px bg-stone-700/80 sm:block" />
-
-      <p className="font-display text-xl italic text-cream sm:text-2xl">
-        {status?.message ?? ' '}
-      </p>
     </div>
   );
 }
 
 function HoursTable({ todayKey }: { todayKey: string | null }) {
   return (
-    <ul className="mt-14 divide-y divide-stone-700/60 border-y border-stone-700/60">
+    <ul className="mt-14 grid grid-cols-1 gap-px overflow-hidden border border-stone-700/60 bg-stone-700/60 sm:grid-cols-7">
       {displayOrder.map((key) => {
         const hours = site.hours[key];
         const isToday = key === todayKey;
@@ -127,51 +133,43 @@ function HoursTable({ todayKey }: { todayKey: string | null }) {
             key={key}
             data-today={isToday || undefined}
             className={cn(
-              'group relative grid grid-cols-[auto_1fr_auto] items-center gap-6 py-5 transition-colors duration-500 ease-cinematic sm:gap-10 sm:py-6',
+              'group flex items-center justify-between gap-4 bg-espresso-deep px-4 py-4 transition-colors duration-500 ease-cinematic sm:flex-col sm:items-stretch sm:justify-start sm:gap-2 sm:px-3 sm:py-5',
               isToday && 'bg-brass/5',
             )}
           >
-            <span
-              aria-hidden
+            <div
               className={cn(
-                'absolute left-0 top-1/2 h-8 w-1 -translate-y-1/2 origin-left bg-brass transition-transform duration-700 ease-cinematic',
-                isToday ? 'scale-x-100' : 'scale-x-0',
-              )}
-            />
-
-            <span className="ml-4 w-8 text-eyebrow uppercase tracking-eyebrow text-cream/70 sm:ml-6 sm:w-10">
-              {germanDayShort[key]}
-            </span>
-
-            <span
-              className={cn(
-                'font-display text-lg italic transition-colors',
-                isToday ? 'text-cream' : 'text-cream/65',
+                'flex items-baseline gap-2 text-eyebrow uppercase tracking-eyebrow sm:flex-col sm:gap-1',
+                isToday ? 'text-brass' : 'text-stone-500',
               )}
             >
-              <span className="hidden sm:inline">{germanDayLong[key]}</span>
-              <span className="sm:hidden">{germanDayLong[key].slice(0, 3)}.</span>
-            </span>
-
-            <span
+              <span className="font-medium">{germanDayShort[key]}</span>
+              <span className="hidden text-stone-500 sm:inline">
+                {germanDayLong[key]}
+              </span>
+            </div>
+            <div
               className={cn(
-                'mr-4 text-right sm:mr-6',
-                hours ? 'text-cream' : 'text-stone-500',
-                isToday && 'text-brass',
+                'text-right tabular-nums sm:text-left',
+                hours
+                  ? isToday
+                    ? 'font-display italic text-cream'
+                    : 'text-cream/80'
+                  : 'text-stone-500',
               )}
             >
               {hours ? (
-                <span className="tabular-nums">
-                  {hours.open}
-                  <span className="mx-2 text-stone-500">–</span>
-                  {hours.close}
-                </span>
+                <>
+                  <span>{hours.open}</span>
+                  <span className="mx-1.5 text-stone-500">–</span>
+                  <span>{hours.close}</span>
+                </>
               ) : (
                 <span className="text-eyebrow uppercase tracking-eyebrow">
-                  Geschlossen
+                  Zu
                 </span>
               )}
-            </span>
+            </div>
           </li>
         );
       })}
