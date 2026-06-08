@@ -1,20 +1,20 @@
 export const site = {
-  name: 'Mauro Ricardo',
-  fullName: 'Friseursalon Mauro Ricardo',
-  tagline: 'Di Piazza Uomo E Donna, 100% Italy',
+  name: 'Salon Beispiel',
+  fullName: 'Friseursalon Beispiel',
+  tagline: 'Uomo E Donna — Demo-Seite',
   description:
-    'Italienisches Friseurhandwerk im Herzen von Münster. Schnitt, Coloration und Styling mit der Seele Italiens.',
-  url: 'https://mauro-ricardo.de',
+    'Demo-Website eines Friseursalons. Alle Inhalte sind Platzhalter und dienen ausschließlich der Vorschau.',
+  url: 'https://example.com',
   locale: 'de-DE',
   timezone: 'Europe/Berlin',
   contact: {
-    phone: '0251 1624493',
-    phoneHref: 'tel:+492511624493',
-    email: 'info@mauro-ricardo.de',
+    phone: '0123 4567890',
+    phoneHref: 'tel:+491234567890',
+    email: 'info@example.com',
     address: {
-      street: 'Idenbrockpl. 5A',
-      postalCode: '48159',
-      city: 'Münster',
+      street: 'Musterstraße 1',
+      postalCode: '12345',
+      city: 'Musterstadt',
       country: 'Deutschland',
     },
   },
@@ -28,9 +28,9 @@ export const site = {
     sunday: null,
   } as const,
   rating: {
-    average: 4.6,
-    count: 84,
-    href: 'https://www.google.com/search?q=Friseursalon+Mauro+Ricardo+M%C3%BCnster',
+    average: 4.8,
+    count: 42,
+    href: 'https://www.google.com/maps',
   },
 } as const;
 

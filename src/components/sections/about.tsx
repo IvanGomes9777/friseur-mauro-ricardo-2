@@ -23,18 +23,18 @@ export function About() {
               id="ueber-uns-h"
               className="font-display text-display italic text-cream"
             >
-              Italienisches Handwerk.
+              Handwerk mit Stil.
               <br />
-              <span className="text-brass/90">Münsteraner Seele.</span>
+              <span className="text-brass/90">Mit Herz gemacht.</span>
             </h2>
           </Reveal>
 
           <Reveal from="left" delay={0.15}>
             <div className="mt-10 max-w-prose space-y-5 text-lg text-cream/75">
               <p>
-                Seit über zwanzig Jahren schneidet Mauro Ricardo italienischen
-                Stil in Münster-Nord. Die Schere wird geführt mit der Ruhe
-                eines Handwerks, das in Italien Generationen alt ist.
+                Seit vielen Jahren steht unser Salon für Stil, Ruhe und
+                handwerkliche Sorgfalt. Eine Schere, geführt mit der Gelassenheit
+                eines Handwerks, das Generationen überdauert hat.
               </p>
               <p>
                 Bei uns ist nichts Standard. Wir nehmen uns Zeit für deinen
@@ -95,7 +95,7 @@ function PortraitPlaceholder() {
           className="h-10 w-10 text-brass/70 transition-transform duration-700 ease-cinematic group-hover:rotate-[8deg]"
           strokeWidth={1.25}
         />
-        <p className="font-display text-2xl italic text-cream/90">Mauro Ricardo</p>
+        <p className="font-display text-2xl italic text-cream/90">{site.name}</p>
         <p className="px-6 text-eyebrow uppercase tracking-eyebrow text-stone-500">
           Portrait folgt
         </p>
