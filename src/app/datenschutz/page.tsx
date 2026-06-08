@@ -40,13 +40,8 @@ export default function DatenschutzPage() {
         <li>Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
       </ul>
       <p>
-        Zuständige Aufsichtsbehörde: Landesbeauftragte für Datenschutz und
-        Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213
-        Düsseldorf.{' '}
-        <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">
-          ldi.nrw.de
-        </a>
-        .
+        Zuständige Aufsichtsbehörde:{' '}
+        <Placeholder>Landesdatenschutzbehörde des jeweiligen Bundeslandes</Placeholder>.
       </p>
 
       <h2>3. Erhebung und Verarbeitung personenbezogener Daten</h2>

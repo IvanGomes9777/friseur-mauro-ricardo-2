@@ -3,8 +3,8 @@
 import { motion, useReducedMotion } from 'framer-motion';
 
 const lines = [
-  ['Wo', 'Münster'],
-  ['italienisch', 'wird.'],
+  ['Wo', 'Stil'],
+  ['zuhause', 'ist.'],
 ];
 
 export function HeroHeadline() {
@@ -14,7 +14,7 @@ export function HeroHeadline() {
 
   return (
     <h1 className="font-display text-hero italic text-cream">
-      <span className="sr-only">Wo Münster italienisch wird.</span>
+      <span className="sr-only">Wo Stil zuhause ist.</span>
       <span aria-hidden className="block">
         {lines.map((line, li) => (
           <span key={li} className="block overflow-hidden pb-1">

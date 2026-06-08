@@ -20,7 +20,7 @@ export function Footer() {
             <p className="mt-6 max-w-sm font-display text-lg italic text-cream/70">
               {site.tagline}.
               <br />
-              Mitten in Münster-Nord.
+              Im Herzen der Stadt.
             </p>
 
             <ul className="mt-10 flex gap-3">
