@@ -41,15 +41,11 @@ export default function ImpressumPage() {
 
       <h2>Aufsichtsbehörde / Zuständige Kammer</h2>
       <address>
-        Handwerkskammer Münster
+        <Placeholder>Zuständige Handwerkskammer</Placeholder>
         <br />
-        Bismarckallee 1
+        <Placeholder>Straße und Hausnummer</Placeholder>
         <br />
-        48151 Münster
-        <br />
-        <a href="https://www.hwk-muenster.de" target="_blank" rel="noopener noreferrer">
-          hwk-muenster.de
-        </a>
+        <Placeholder>PLZ und Ort</Placeholder>
       </address>
 
       <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>

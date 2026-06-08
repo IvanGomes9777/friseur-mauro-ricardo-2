@@ -20,7 +20,7 @@ export function Hero({ imageSrc }: HeroProps) {
 
       <div className="relative z-10 container-default pb-28 pt-40 md:pb-40">
         <p className="eyebrow mb-8 animate-fade-up [animation-delay:0.15s]">
-          100% Italian Hairstyle · Münster
+          Friseur · Demo-Seite
         </p>
 
         <HeroHeadline />
@@ -29,8 +29,8 @@ export function Hero({ imageSrc }: HeroProps) {
           Forbice, mano, pazienza.
         </p>
         <p className="mt-4 max-w-prose text-base text-cream/65 animate-fade-up [animation-delay:1.7s]">
-          Italienisches Friseurhandwerk seit{' '}
-          <span className="text-brass">[JAHR]</span> mitten in Münster-Nord.
+          Friseurhandwerk seit{' '}
+          <span className="text-brass">[JAHR]</span> mitten in der Stadt.
         </p>
 
         <div className="mt-12 flex flex-col gap-4 animate-fade-up [animation-delay:1.8s] sm:flex-row sm:items-center">

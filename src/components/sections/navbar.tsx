@@ -140,7 +140,7 @@ export function Navbar() {
                 >
                   <BookingButton className="w-full" />
                   <p className="mt-6 text-eyebrow uppercase tracking-eyebrow text-stone-500">
-                    Idenbrockpl. 5A · 48159 Münster
+                    Musterstraße 1 · 12345 Musterstadt
                   </p>
                 </motion.div>
               </nav>

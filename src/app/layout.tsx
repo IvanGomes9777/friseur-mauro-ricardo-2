@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description: site.description,
-  keywords: ['Friseur Münster', 'italienischer Friseur', 'Haarschnitt Münster', 'Mauro Ricardo'],
+  keywords: ['Friseur', 'Haarschnitt', 'Salon', 'Demo'],
   openGraph: {
     type: 'website',
     locale: site.locale,

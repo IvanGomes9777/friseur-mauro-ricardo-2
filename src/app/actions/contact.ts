@@ -37,7 +37,7 @@ export async function sendContact(
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_EMAIL_TO ?? site.contact.email;
-  const from = process.env.CONTACT_EMAIL_FROM ?? 'website@mauro-ricardo.de';
+  const from = process.env.CONTACT_EMAIL_FROM ?? 'website@example.com';
 
   if (!apiKey) {
     console.warn('[contact] RESEND_API_KEY not set — logging only');

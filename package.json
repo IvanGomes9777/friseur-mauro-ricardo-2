@@ -2,7 +2,7 @@
   "name": "friseur-mauro-ricardo-2",
   "version": "0.1.0",
   "private": true,
-  "description": "Cinematic GDPR-compliant website for the italian hair salon Mauro Ricardo in Münster.",
+  "description": "Cinematic GDPR-compliant demo website for a hair salon.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
