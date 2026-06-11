@@ -2,7 +2,7 @@
 
 > **Status**: 🚧 Platzhalter — finale Angaben siehe `TODO.md`
 > Stand: 2026-06-06
-> Diese Datenschutzerklärung wurde unter Berücksichtigung der DSGVO und des TTDSG erstellt.
+> Diese Datenschutzerklärung wurde unter Berücksichtigung der DSGVO und des TDDDG (vormals TTDSG, umbenannt zum 14.05.2024) erstellt.
 
 ---
 
@@ -81,11 +81,11 @@ Data Processing Addendum: https://vercel.com/legal/dpa
 ## 5. Cookies und ähnliche Technologien
 
 Wir verwenden technisch notwendige Cookies, die für den Betrieb der Website
-erforderlich sind. Diese werden ohne Ihre Einwilligung gesetzt (§ 25 Abs. 2 Nr. 2 TTDSG).
+erforderlich sind. Diese werden ohne Ihre Einwilligung gesetzt (§ 25 Abs. 2 Nr. 2 TDDDG).
 
 Optionale Cookies (z. B. für Google Maps, Analytics) werden ausschließlich nach
 Ihrer ausdrücklichen Einwilligung über unser Cookie-Consent-Banner gesetzt
-(§ 25 Abs. 1 TTDSG / Art. 6 Abs. 1 lit. a DSGVO).
+(§ 25 Abs. 1 TDDDG / Art. 6 Abs. 1 lit. a DSGVO).
 
 Sie können Ihre Einwilligung jederzeit über den Link **„Cookie-Einstellungen"**
 im Footer widerrufen.

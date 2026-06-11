@@ -1,6 +1,6 @@
 # Cookie-Consent — Konzept
 
-> Rechtsgrundlage: § 25 TTDSG + Art. 6 Abs. 1 lit. a DSGVO. Echtes Opt-In, granular, jederzeit widerrufbar.
+> Rechtsgrundlage: § 25 TDDDG (vormals TTDSG) + Art. 6 Abs. 1 lit. a DSGVO. Echtes Opt-In, granular, jederzeit widerrufbar.
 
 ---
 
