@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ImpressumPage() {
   return (
     <LegalPage eyebrow="Rechtliches" title="Impressum" updated="06.06.2026">
-      <h2>Angaben gemäß § 5 TMG</h2>
+      <h2>Angaben gemäß § 5 DDG</h2>
       <address>
         <strong>{site.fullName}</strong>
         <br />
@@ -74,20 +74,6 @@ export default function ImpressumPage() {
         <Placeholder>Name, Anschrift wie oben</Placeholder>
       </p>
 
-      <h2>EU-Streitschlichtung</h2>
-      <p>
-        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung
-        (OS) bereit:{' '}
-        <a
-          href="https://ec.europa.eu/consumers/odr/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ec.europa.eu/consumers/odr
-        </a>
-        .
-      </p>
-
       <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
       <p>
         Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor
@@ -96,9 +82,9 @@ export default function ImpressumPage() {
 
       <h2>Haftung für Inhalte</h2>
       <p>
-        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf
+        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf
         diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis
-        10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte
+        10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte
         oder gespeicherte fremde Informationen zu überwachen.
       </p>
 

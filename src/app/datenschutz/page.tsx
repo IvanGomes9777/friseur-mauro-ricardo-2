@@ -96,12 +96,12 @@ export default function DatenschutzPage() {
       <p>
         Wir verwenden technisch notwendige Cookies, die für den Betrieb der
         Website erforderlich sind. Diese werden ohne Ihre Einwilligung gesetzt
-        (§ 25 Abs. 2 Nr. 2 TTDSG).
+        (§ 25 Abs. 2 Nr. 2 TDDDG).
       </p>
       <p>
         Optionale Funktionen (insbesondere die Google-Maps-Karte) werden
         ausschließlich nach Ihrer ausdrücklichen Einwilligung geladen
-        (§ 25 Abs. 1 TTDSG / Art. 6 Abs. 1 lit. a DSGVO). Sie können Ihre
+        (§ 25 Abs. 1 TDDDG / Art. 6 Abs. 1 lit. a DSGVO). Sie können Ihre
         Einwilligung jederzeit über den Link <strong>„Cookie-Einstellungen"</strong>{' '}
         im Footer widerrufen.
       </p>
