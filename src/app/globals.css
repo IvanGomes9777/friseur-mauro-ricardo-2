@@ -12,6 +12,15 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  html,
+  body {
+    /* Verhindert horizontales Verschieben/Wackeln der Seite, z. B. durch
+       seitliche Reveal-Animationen (translateX), die kurzzeitig über den
+       Viewport-Rand hinausragen. */
+    overflow-x: hidden;
   }
 
   body {
@@ -19,11 +28,16 @@
     color: theme('colors.cream.DEFAULT');
     font-family: theme('fontFamily.sans');
     line-height: 1.65;
-    scrollbar-width: none;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* alte Edge/IE */
   }
 
+  /* Scrollleiste auf allen Geräten ausblenden, Scrollen bleibt erhalten. */
+  html::-webkit-scrollbar,
   body::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 0;
+    display: none; /* Chrome, Safari, neuere Edge */
   }
 
   ::selection {
